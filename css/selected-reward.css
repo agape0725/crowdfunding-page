@@ -1,0 +1,41 @@
+.selected {
+  background-color: white;
+  width: 700px;
+  border-radius: 10px;
+  margin: auto;
+  /* visibility: hidden; */
+  position: relative;
+
+
+  border: 2px #EAEAEA solid;
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.selected {
+  visibility: hidden;
+}
+
+.selected.select {
+  visibility: visible;
+}
+
+.amount-continue-flex-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.reward-close-button {
+  float: right;
+  cursor: pointer;
+}

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+
+  /* Primary Colors */
+  --p-moderate-cyan: hsl(176, 50%, 47%);
+  --p-dark-cyan: hsl(176, 72%, 28%);
+
+
+  /* Neutral */
+  --n-black: hsl(0, 0%, 0%);
+  --n-dark-gray: hsl(0, 0%, 48%);
+
+  /* Font Size and Family */
+  --f-size: 16px;
+  --f-family: 'Commissioner', sans-serif;
+  --f-weight-thin: 100;
+  --f-weight-extralight: 200;
+  --f-weight-light: 300;
+  --f-weight-regular: 400;
+  --f-weight-medium: 500;
+  --f-weight-semibold: 600;
+  --f-weight-bold: 700;
+  --f-weight-extrabold: 800;
+  --f-weight-boldblack: 900;
+}
+
+body {
+  background-color: lightpink;
+}
+
+.support-container {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  height: 350px;
+  background-color: white;
+  width: 450px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.check-logo {
+  height: 80px;
+  width: 80px;
+}
+
+.got-it-button {
+  background-color: var(--p-moderate-cyan);
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  font-family: var(--f-family);
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: var(--f-weight-semibold);
+}
+
+.got-it-button:hover {
+  background-color: var(--p-dark-cyan);
+}

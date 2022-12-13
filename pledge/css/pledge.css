@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+
+  /* Primary Colors */
+  --p-moderate-cyan: hsl(176, 50%, 47%);
+  --p-dark-cyan: hsl(176, 72%, 28%);
+
+  /* Neutral */
+  --n-black: hsl(0, 0%, 0%);
+  --n-dark-gray: hsl(0, 0%, 48%);
+
+  /* Font Size and Family */
+  --f-size: 16px;
+  --f-family: 'Commissioner', sans-serif;
+  --f-weight-thin: 100;
+  --f-weight-extralight: 200;
+  --f-weight-light: 300;
+  --f-weight-regular: 400;
+  --f-weight-medium: 500;
+  --f-weight-semibold: 600;
+  --f-weight-bold: 700;
+  --f-weight-extrabold: 800;
+  --f-weight-boldblack: 900;
+}
+
+body {
+  background-color: var(--p-moderate-cyan);
+  height: 100vh;
+  font-family: var(--f-family);
+}
+
+button {
+  cursor: pointer;
+}
+
+.color-gray {
+  color: var(--n-dark-gray);
+  margin-top: 10px;
+}
+
+.cyan {
+  color: var(--p-moderate-cyan);
+  font-weight: var(--f-weight-semibold);
+}
+
+.horizontal-rule {
+  background-color: #EAEAEA;
+  height: 1px;
+  border: none;
+  width: 80%;
+  margin: auto;
+}
+
+.title-h3 {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.project-button {
+  background-color: #182747;
+  border: none;
+  padding: 15px 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+  font-family: var(--f-family);
+}
+
+.project-clicked {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 54%;
+}
+
+.back-project {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.project-clicked-box {
+  height: 150px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: auto;
+  padding: 0 40px;
+
+  cursor: pointer;
+}
+
+.boxes {
+  border: 1px #EAEAEA solid;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.boxes.show {
+  border: 3px var(--p-moderate-cyan) solid;
+  border-radius: 15px;
+}
+
+.radio-button {
+  margin-right: 40px;
+  height: 30px;
+  width: 30px;
+}
+
+.title-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-flex div:nth-child(1),
+.title-flex div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 7px;
+}
+
+/* Enter Pledge Amount */
+/* Enter Pledge Amount */
+
+.pledge__container {
+  position: relative;
+}
+
+.amount-continue-flex,
+.continue-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.amount-continue-flex {
+  width: 90%;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+}
+
+.amount-continue-flex.visible {
+  position: relative;
+  opacity: 1;
+
+  animation-name: pledge-animation;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes pledge-animation {
+  0% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: .6
+  }
+
+  100% {
+    position: relative;
+    opacity: 1;
+  }
+}
+
+.huge {
+  font-size: 12px;
+}
+
+.continue-flex {
+  grid-gap: 20px;
+}
+
+.textbox {
+  border-radius: 25px;
+  padding: 15px;
+  border: 3px #EAEAEA solid;
+  font-family: var(--f-family);
+  font-weight: var(--f-weight-semibold);
+}
+
+.textbox::placeholder {
+  color: #EAEAEA;
+  font-weight: var(--f-weight-medium);
+}
+
+.continue-button {
+  border-radius: 25px;
+  padding: 15px;
+  background-color: var(--p-moderate-cyan);
+  color: white;
+  border: none;
+  font-weight: var(--f-weight-semibold);
+}
+
+.continue-button:hover {
+  background-color: var(--p-dark-cyan);
+}

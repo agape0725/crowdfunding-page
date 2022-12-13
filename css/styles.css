@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+
+  /* Primary Colors */
+  --p-moderate-cyan: hsl(176, 50%, 47%);
+  --p-dark-cyan: hsl(176, 72%, 28%);
+
+
+  /* Neutral */
+  --n-black: hsl(0, 0%, 0%);
+  --n-dark-gray: hsl(0, 0%, 48%);
+
+  /* Font Size and Family */
+  --f-size: 16px;
+  --f-family: 'Commissioner', sans-serif;
+  --f-weight-thin: 100;
+  --f-weight-extralight: 200;
+  --f-weight-light: 300;
+  --f-weight-regular: 400;
+  --f-weight-medium: 500;
+  --f-weight-semibold: 600;
+  --f-weight-bold: 700;
+  --f-weight-extrabold: 800;
+  --f-weight-boldblack: 900;
+}
+
+body {
+  background-color: #EEEEEE;
+  font-family: var(--f-family);
+}
+
+.container {
+  background-color: white;
+  width: 700px;
+  border-radius: 10px;
+  margin: auto;
+  /* visibility: hidden; */
+  position: relative;
+}
+
+header {
+  /* visibility: hidden; */
+}
+
+.color-gray {
+  color: var(--n-dark-gray);
+  line-height: 2.1rem;
+}
+
+.cyan {
+  color: var(--p-moderate-cyan);
+  font-weight: var(--f-weight-semibold);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Header */
+/* Header */
+/* Header */
+/* Header */
+/* Header */
+
+.header-container {}
+
+.header-image {
+  background-image: url('../images/image-hero-desktop.jpg');
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  z-index: -1;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-header li {
+  margin: 0 15px;
+  list-style-type: none;
+}
+
+.navbar-header li,
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: var(--f-weight-medium);
+}
+
+.navbar-header a {
+  position: relative;
+}
+
+.navbar-header a::before {
+  content: '';
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px var(--p-moderate-cyan) solid;
+  margin-bottom: -4px;
+
+}
+
+.navbar-header a:hover::before {
+  animation-name: alink-hover;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes alink-hover {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+    position: absolute;
+  }
+}
+
+/* Bookmark Container */
+/* Bookmark Container */
+/* Bookmark Container */
+
+.bookmark-container {
+  margin-top: 250px;
+  height: 300px;
+  text-align: center;
+}
+
+.bookmark-logo {
+  transform: translate(-20px, -25px);
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+
+.bookmark-content {
+  padding-top: 70px;
+}
+
+.bookmark-content h1 {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.bookmark-content p {
+  color: var(--n-dark-gray);
+  font-weight: var(--f-weight-medium);
+}
+
+.bookmark-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.bookmark-flex button:hover {
+  background-color: var(--p-dark-cyan);
+}
+
+.bookmark-flex-right {
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-icon {
+  height: 50px;
+  width: 50px;
+  transform: translateX(-5px);
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+}
+
+.header-button {
+  background-color: var(--n-dark-gray);
+  background-color: transparent;
+  padding: 15px 50px;
+  border-radius: 25px;
+  border: 0px;
+  background-color: var(--p-moderate-cyan);
+  font-family: var(--f-family);
+  font-weight: var(--f-weight-semibold);
+  font-size: var(--f-size);
+  color: white;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background-color: var(--p-dark-cyan);
+}
+
+.bookmark-button {
+  background-color: var(--n-dark-gray);
+}
+
+.bookmarked {
+  background-color: #EAEAEA;
+  color: var(--p-dark-cyan);
+  padding: 15px 40px;
+}
+
+.bookmarked::after {
+  content: 'ed';
+}
+
+.bookmarked-icon {
+  transform: translateX(140px);
+  filter: invert(50%) sepia(85%) saturate(371%) hue-rotate(129deg) brightness(91%) contrast(93%);
+}
+
+.hover-bookmark:hover {
+  background-color: var(--n-dark-gray);
+  opacity: .6;
+}
+
+/* Percentage Container */
+/* Percentage Container */
+/* Percentage Container */
+
+.percentage-container {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  margin: 20px auto auto auto;
+  height: 150px;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: left;
+}
+
+.percentage-container h1 {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.percentage-container p {
+  font-size: 14px;
+}
+
+.content {
+  margin-left: 20px;
+}
+
+
+.content:nth-child(1) {
+  border-right: 1px var(--n-dark-gray) solid;
+  padding-right: 40px;
+  padding-left: 25px;
+}
+
+.content:nth-child(2) {
+  border-right: 1px var(--n-dark-gray) solid;
+  padding-right: 65px;
+  padding-left: 30px;
+}
+
+.content:nth-child(3) {
+  padding-left: 15px;
+}
+
+.progress-bar {
+  width: 650px;
+  height: .8em;
+  background-color: var(--n-dark-gray);
+  border-radius: 1.5rem;
+  color: var(--p-moderate-cyan);
+  margin: auto;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: attr(data-label);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 72%;
+  height: .8em;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 1.5rem;
+}
+
+/* About Container */
+/* About Container */
+/* About Container */
+
+.about-container {
+  height: 73.5em;
+}
+
+.about {
+  max-width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.about h1 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: var(--f-weight-extrabold);
+}
+
+.about p {
+  line-height: 2.1rem;
+  font-weight: var(--f-weight-medium);
+  font-size: 15.7px;
+}
+
+.about p:nth-child(2) {
+  margin-bottom: 40px;
+}
+
+.offer {
+  max-width: 90%;
+  border: 2px #EAEAEA solid;
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.flex-price-title,
+.flex-slot-button,
+.flex-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-price-title {
+  margin-bottom: 25px;
+}
+
+.flex-slot-button {
+  margin-top: 25px;
+}
+
+.flex-slot-button h1 {
+  font-size: 30px;
+  font-weight: var(--f-weight-extrabold);
+}
+
+.flex-slot-button p {
+  margin-left: 5px;
+}
+
+.reward-button {
+  background-color: var(--p-moderate-cyan);
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  font-family: var(--f-family);
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: var(--f-weight-semibold);
+}
+
+.third-offer {
+  opacity: .4;
+}
+
+.grayed-out-button {
+  background-color: var(--n-dark-gray);
+  cursor: default;
+
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  font-family: var(--f-family);
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: var(--f-weight-semibold);
+}
+
+#blur.blurred {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+  opacity: .7;
+}
+
+/* Support Container */
+/* Support Container */
+/* Support Container */
+
+.support-container {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  height: 420px;
+  background-color: white;
+  width: 450px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 20px;
+
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#first-output.hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+#second-output.hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+#third-output.hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+#fourth-output.hide {
+  visibility: hidden;
+  position: absolute;
+}
+
+.amount-error {
+  visibility: hidden;
+  font-style: italic;
+  font-size: 13px;
+  color: red;
+}
+
+.amount-error.error {
+  visibility: visible;
+}
+
+.support-container.popup {
+  visibility: visible;
+}
+
+.check-logo {
+  height: 80px;
+  width: 80px;
+}
+
+.pledge-output {
+  font-size: 35px;
+  font-weight: var(--f-weight-extrabold);
+  color: green;
+  transform: translateY(6px);
+}
+
+.got-it-button {
+  background-color: var(--p-moderate-cyan);
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  font-family: var(--f-family);
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: var(--f-weight-semibold);
+}
+
+.got-it-button:hover {
+  background-color: var(--p-dark-cyan);
+}
+
+/* Selected Reward Container  */
+/* Selected Reward Container  */
+/* Selected Reward Container  */
